@@ -1,0 +1,26 @@
+.py-base{
+  padding-block: var(--py-base);
+}
+
+.px-xl{
+  padding-inline: var(--px-xl);
+}
+
+.px-mid{
+  padding-inline: var(--px-mid);
+}
+
+.container{
+  --max-width: 24em;
+  --px: var(--px-mid);
+  padding-block: var(--py-base);
+  width: min(var(--max-width), 100% - var(--px)*2);
+  margin: auto;
+}
+
+@media (width >= 80em){
+  .container{
+    --max-width: 80em;
+    --px: var(--px-xl);
+  }
+}
