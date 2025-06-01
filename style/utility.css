@@ -18,11 +18,19 @@
   margin-inline: auto;
 }
 
+/* hero */
 .even-columns{
   display: flex;
   flex-direction: column-reverse;
+  /* justify-content: space-around; */
   gap: 1.5rem;
 }
+
+.flex-reverse{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 
 @media (width >= 80em){
   .container{
@@ -32,6 +40,11 @@
 
   .even-columns{
     flex-direction: row;
+    /* justify-content: space-around; */
     gap: 2rem;
+  }
+
+  .flex-reverse{
+    flex-direction: row;
   }
 }
