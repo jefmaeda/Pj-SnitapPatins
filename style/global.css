@@ -6,7 +6,7 @@
 
 :root{
   --snitap-sun: #FFCD1E;
-  --snitap-joy-mid: #06B6D4;
+  --snitap-sky-mid: #06B6D4;
   --snitap-sky-light: #67E8F9;
   --snitap-joy-mid: #DB2777;
   --snitap-joy-light: #F472B6;
@@ -33,7 +33,7 @@
   --px-mid: 1.5rem;
 }
 
-span,button{
+span, button{
   font-family: var(--ff-monster);
   font-weight: var(--fw-mid);
   line-height: 1.5;
@@ -47,7 +47,7 @@ span{
   font-size: var(--fs-sm);
 }
 
-h1,h2{
+h1, h2{
   font-family: var(--ff-syne);
   font-weight: var(--fw-xl);
   line-height: 1.25;

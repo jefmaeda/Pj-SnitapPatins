@@ -15,7 +15,7 @@
   --px: var(--px-mid);
   padding-block: var(--py-base);
   width: min(var(--max-width), 100% - var(--px)*2);
-  margin: auto;
+  margin-inline: auto;
 }
 
 @media (width >= 80em){

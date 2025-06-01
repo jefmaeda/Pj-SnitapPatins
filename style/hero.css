@@ -1,0 +1,113 @@
+.hero{
+  & h1{
+    --max-width:19.5rem;
+    max-width: var(--max-width);
+  }
+  
+  & h1 div{
+    --height: 2.5rem;
+    --slider-up:-2.5rem;
+    display: inline-block;
+    overflow: hidden;
+    height: var(--height);
+    width: min-content;
+    vertical-align: bottom;
+    
+    & span:nth-child(1),
+    & span:nth-child(4){
+      color: var(--snitap-joy-mid);
+    }
+    & span:nth-child(2){
+      color: var(--snitap-leaf-mid);
+    }
+    & span:nth-child(3){
+      color: var(--snitap-sky-mid);
+    }
+    & span{
+      height: var(--height);
+      font: inherit;
+      display: block;
+
+      animation: slideUp 6s infinite ease;
+    }
+
+  }
+}
+
+@keyframes slideUp{
+  0%, 22%{
+    transform: translateY(0);
+  }
+
+  /* in */
+  23%{
+    transform: translateY(calc(var(--slider-up) - 15px));
+  }
+  25%{
+    transform: translateY(calc(var(--slider-up) + 10px));
+  }
+
+  28%{
+    transform: translateY(calc(var(--slider-up) - 5px));
+  }
+  30%{
+    transform: translateY(calc(var(--slider-up) + 5px));
+  }
+  /* static */
+
+  33%, 55%{
+    transform: translateY(var(--slider-up));
+  }
+
+  /* in */
+  56%{
+    transform: translateY(calc(var(--slider-up)*2 - 15px));
+  }
+  57%{
+    transform: translateY(calc(var(--slider-up)*2 + 10px));
+  }
+
+  60%{
+    transform: translateY(calc(var(--slider-up)*2 - 5px));
+  }
+  63%{
+    transform: translateY(calc(var(--slider-up)*2 + 5px));
+  }
+  /* static */
+
+  66%, 88%{
+    transform: translateY(calc(var(--slider-up)*2));
+  }
+
+  /* in */
+  89%{
+    transform: translateY(calc(var(--slider-up)*3 - 15px));
+  }
+  90%{
+    transform: translateY(calc(var(--slider-up)*3 + 10px));
+  }
+
+  93%{
+    transform: translateY(calc(var(--slider-up)*3 - 5px));
+  }
+  95%{
+    transform: translateY(calc(var(--slider-up)*3 + 5px));
+  }
+  /* static */
+
+  100%{
+    transform: translateY(calc(var(--slider-up)*3));
+  }
+}
+
+@media (width >= 80em){
+  .hero{
+    & h1{
+      --max-width:40rem;
+    }
+    & h1 div{
+      --height: 5rem;
+      --slider-up: -5rem;
+    }
+  }
+}
