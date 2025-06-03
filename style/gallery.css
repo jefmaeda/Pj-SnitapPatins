@@ -1,0 +1,123 @@
+.gallery{
+  padding-block: 1.5rem;
+
+  & header{
+    text-align: center;
+  }
+
+  & .content{
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  & figure{
+    line-height: 0;
+    border-radius: 2.5rem;
+    overflow: hidden;
+
+    position: relative;
+
+    animation: image-appear linear backwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
+
+
+    & > img{
+      height: 16rem;
+      object-fit: cover;
+      transition: scale 500ms;
+    }
+
+    &:hover{
+      & > img{
+        scale: 1.1;
+      }
+
+      & figcaption{
+        transform: translateY(0);
+      }
+    }
+
+    & figcaption{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: .5rem;
+
+      color: white;
+
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+
+      transform: translateY(100%);
+      transition: transform 500ms;
+
+      padding: .5rem 1rem;
+      background: linear-gradient(
+        to top,
+        rgb(0 0 0 / .64),
+        rgb(0 0 0 / 0)
+      );
+      & img{
+        width: 2rem;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@keyframes image-appear{
+  from{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@media (width >= 80em){
+  .gallery{
+    & header span{
+      --fs-sm: .875rem;
+    }
+
+    & .content{
+      margin-top: 2rem;
+      grid-template-areas: 
+      "a b b"
+      "c c d";
+      gap: 2rem;
+
+      
+    }
+
+    & figure{
+
+      &[date-delay]{
+        animation-range: 180px 380px;
+      }
+
+      & > img{
+        height: 25rem;
+      }
+      &:nth-child(1){
+        grid-area: a;
+      }
+      &:nth-child(2){
+        grid-area: b;
+      }
+      &:nth-child(3){
+        grid-area: c;
+      }
+      &:nth-child(4){
+        grid-area: d;
+      }
+
+      & figcaption{
+      padding: 1.5rem 2rem;
+      }
+    }
+  }
+}

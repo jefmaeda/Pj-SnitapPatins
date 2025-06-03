@@ -33,7 +33,7 @@
   --px-mid: 1.5rem;
 }
 
-span, button{
+span, button, figcaption{
   font-family: var(--ff-monster);
   font-weight: var(--fw-mid);
   line-height: 1.5;
@@ -43,7 +43,7 @@ html, button{
   font-size: var(--fs-mid);
 }
 
-span{
+span, figcaption{
   font-size: var(--fs-sm);
 }
 
@@ -64,6 +64,11 @@ h2{
 a{
   color: inherit;
   text-decoration: none;
+}
+
+img{
+  width: 100%;
+  display: block;
 }
 
 @media (width >= 80em){

@@ -59,6 +59,11 @@
       &.buy{
         background-color: var(--snitap-sun);
         padding: 1.5rem 3rem;
+
+        & img{
+          width: 24px;
+          height: 24px;
+        }
       }
 
       &.play span{

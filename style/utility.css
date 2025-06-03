@@ -10,6 +10,10 @@
   padding-inline: var(--px-mid);
 }
 
+.uppercase{
+  text-transform: uppercase;
+}
+
 .container{
   --max-width: 24em;
   --px: var(--px-mid);
