@@ -33,14 +33,14 @@
   --px-mid: 1.5rem;
 }
 
-span, button, figcaption{
+span, figcaption{
   font-family: var(--ff-monster);
   font-weight: var(--fw-mid);
   line-height: 1.5;
 }
 
 html, button{
-  font-size: var(--fs-mid);
+  font: var(--fw-mid) var(--fs-mid)/1.5 var(--ff-monster);
 }
 
 span, figcaption{
