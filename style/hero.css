@@ -1,13 +1,12 @@
 .hero{
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 2.5rem;
   overflow: hidden;
   
   & > div{
     --max-width:19.5rem;
     max-width: var(--max-width);
-    /* padding-left: 10px; */
   }
   
   & h1 div{

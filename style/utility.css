@@ -18,7 +18,8 @@
   --max-width: 24em;
   --px: var(--px-mid);
   padding-block: var(--py-base);
-  width: min(var(--max-width), 100% - var(--px)*2);
+  padding-inline: var(--px);
+  min-width: var(--max-width);
   margin-inline: auto;
 }
 

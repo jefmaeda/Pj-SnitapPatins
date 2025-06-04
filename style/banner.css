@@ -7,6 +7,10 @@
     width: 100%;
     overflow: hidden;
     padding-block: 1rem;
+    
+    & img{
+      width: 5.3rem;
+    }
   }
 
   .rolling{
