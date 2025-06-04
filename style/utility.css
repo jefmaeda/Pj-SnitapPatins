@@ -17,8 +17,7 @@
 .container{
   --max-width: 24em;
   --px: var(--px-mid);
-  padding-block: var(--py-base);
-  padding-inline: var(--px);
+  padding: var(--py-base) var(--px);
   min-width: var(--max-width);
   margin-inline: auto;
 }
@@ -27,7 +26,6 @@
 .even-columns{
   display: flex;
   flex-direction: column-reverse;
-  /* justify-content: space-around; */
   gap: 1.5rem;
 }
 
